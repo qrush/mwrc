@@ -13,5 +13,6 @@ TweetStream::Daemon.new(ENV['USER'],ENV['PASSWORD']).follow(*user_ids) do |statu
   redis.zincrby "tweets:count", 1, handle
   status.text.split.each do |word|
     redis.sadd "tweets:words:#{handle}", word
+    redis.zincrby "tweets:frequency:#{handle}", 1, word
   end
 end
