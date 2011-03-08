@@ -2,6 +2,17 @@
 
 require 'redis'
 
+
+redis = Redis.new
+stat  = File.stat("normal.txt")
+sprintf("%b", stat.mode)
+
+
+perm.mode.to_s.scan(/\d/).reverse.each_with_index do |bit, index|
+  redis.setbit("perms:#{file}", index, bit)
+end
+
+
 class Permify
   def self.redis
     @redis ||= Redis.new
