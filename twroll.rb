@@ -24,7 +24,7 @@ USERS = %w[
   devlindaley
   wycats
 ]
-
+# unique words
 puts "unique words"
 redis = Redis.new
 words = USERS.map { |name| "tweets:words:#{name}" }
@@ -41,7 +41,7 @@ puts "top words"
 freqs = USERS.map { |name| "tweets:frequency:#{name}" }
 redis.zunionstore("allfreqs", freqs)
 top = redis.zrevrange "allfreqs", 0, 9, :with_scores => true
-p Hash[*top]
+pp top
 puts
 
 puts "dirty words"
@@ -74,4 +74,17 @@ freqs.each do |freq|
   p Hash[*top]
 
 end
+
+
+
+# create the suits
+redis.lpush "suits", "Hearts"
+redis.lpush "suits", "Spades"
+redis.lpush "suits", "Clubs"
+redis.lpush "suits", "Diamons"
+
+# a user picks a suit
+redis.lrange "suits", 0, -1
+redis.lrem "suits", "Clubs"
+
 
