@@ -75,8 +75,6 @@ freqs.each do |freq|
 
 end
 
-
-
 # create the suits
 redis.lpush "suits", "Hearts"
 redis.lpush "suits", "Spades"
