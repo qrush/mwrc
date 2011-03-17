@@ -26,3 +26,76 @@ You've entered an untested playground/sandbox for my talk. Just a heads up!
 ├── user_ids.txt     < everyone's twitter user ids
 └── watch.rb         < twitterstream daemon to run and listen for tweets
 
+= Stats
+
+Did this as an experiment to show set operations. Here's some example output from twroll.rb:
+
+unique words
+9055
+
+top 3 twitters
+{"objo"=>"310", "jtimberman"=>"340", "elight"=>"353"}
+
+top words
+["the",
+ "708",
+ "to",
+ "650",
+ "a",
+ "564",
+ "I",
+ "461",
+ "of",
+ "371",
+ "and",
+ "330",
+ "for",
+ "318",
+ "is",
+ "313",
+ "in",
+ "288",
+ "you",
+ "265"]
+
+dirty words
+"tweets:frequency:zedshaw"
+{"fuck"=>"2"}
+"tweets:frequency:dojo4"
+{}
+"tweets:frequency:bobbywilson0"
+{}
+"tweets:frequency:wayneeseguin"
+{}
+"tweets:frequency:jtimberman"
+{"fuck"=>"2"}
+"tweets:frequency:geemus"
+{}
+"tweets:frequency:qrush"
+{}
+"tweets:frequency:cwyckoff"
+{}
+"tweets:frequency:brynary"
+{}
+"tweets:frequency:jimweirich"
+{}
+"tweets:frequency:mattyoho"
+{}
+"tweets:frequency:prestonism"
+{}
+"tweets:frequency:igrigorik"
+{}
+"tweets:frequency:mjijackson"
+{}
+"tweets:frequency:emullet"
+{}
+"tweets:frequency:objo"
+{"shit"=>"2", "ass"=>"4"}
+"tweets:frequency:elight"
+{"ass"=>"2", "piss"=>"2"}
+"tweets:frequency:AndyMaleh"
+{}
+"tweets:frequency:devlindaley"
+{}
+"tweets:frequency:wycats"
+{}
