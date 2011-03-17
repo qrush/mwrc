@@ -1,3 +1,28 @@
 = MWRC 2011
 
-Scripts and more for MWRC 2011! I'll be documenting these in a moment.
+Scripts and more for MWRC 2011!
+
+= THE TALK
+
+http://bit.ly/redis-behind-the-keys
+
+= NOTICE
+
+You've entered an untested playground/sandbox for my talk. Just a heads up!
+
+= What's in here
+.
+├── compl1.rb        < Antirez's autocomplete script, I was trying to figure out how it worked.
+├── dump.rdb         < redis-server dump file that contains tweets from the past 3 weeks of many speakers from #mwrc!
+├── female-names.txt < data for antirez's autocomplete script
+├── perms            < permissions example from the talk
+│   ├── executable   < executable file for file perms test
+│   ├── first.rb     < File.stat/mode example
+│   ├── normal.txt   < blank file
+│   ├── permify.rb   < wrote an OO wrapper around getbit/setbit, how stupid am i?
+│   └── public.txt   < another blank file with different perms
+├── reaper.rb        < how I got everyone's twitter user ID using the twitter api & curl
+├── twroll.rb        < experiment/syntax highlight script. run after loading dump.rdb to see fun stats!
+├── user_ids.txt     < everyone's twitter user ids
+└── watch.rb         < twitterstream daemon to run and listen for tweets
+
